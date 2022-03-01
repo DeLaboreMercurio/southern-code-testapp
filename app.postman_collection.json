@@ -1,0 +1,462 @@
+{
+	"info": {
+		"_postman_id": "35de219b-d570-46f7-96d6-f8bb7fc5f6ed",
+		"name": "Properties",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Property",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Tudor house\",\r\n    \"base_price\" : 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/property/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"property",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Pricing Rule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"property\" : 1,\r\n    \"specific_day\" : \"06-19-2022\",\r\n    \"min_stay_length\" : 14,\r\n    \"price_modifier\" : 0.8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/pricing/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pricing",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"property\" : 1,\r\n    \"date_start\" : \"MM-DD-YYYY\",\r\n    \"date_end\" : \"MM-DD-YYYY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/booking/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all properties",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/property/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"property",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/booking/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Pricing Rules",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/pricing/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pricing",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get booking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/booking/{{booking_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						"{{booking_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get property",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/property/{{property_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"property",
+						"{{property_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pricing Rule",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/pricing/{{pricing_rule_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pricing",
+						"{{pricing_rule_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Booking",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"property\" : 1,\r\n    \"date_start\" : \"MM-DD-YYYY\",\r\n    \"date_end\" : \"MM-DD-YYYY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/booking/{{booking_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						"{{booking_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Pricing Rule",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"property\" : 1,\r\n    \"specific_day\" : \"MM-DD-YYYY\",\r\n    \"min_stay_length\" : 14,\r\n    \"price_modifier\" : 0.8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/pricing/{{pricing_rule_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pricing",
+						"{{pricing_rule_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update property",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"property name\",\r\n    \"base_price\" : 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/property/{{property_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"property",
+						"{{property_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch property",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"property name\", //OPTIONAL\r\n    \"base_price\" : 100 //OPTIONAL\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/property/{{property_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"property",
+						"{{property_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Pricing Rule",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"property\" : 1, \r\n    \"specific_day\" : \"MM-DD-YYYY\", //OPTIONAL\r\n    \"min_stay_length\" : 14, //OPTIONAL\r\n    \"price_modifier\" : 0.8 //OPTIONAL\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/pricing/{{pricing_rule_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pricing",
+						"{{pricing_rule_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Booking",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"property\" : 1,\r\n    \"date_start\" : \"MM-DD-YYYY\", // OPTIONAL\r\n    \"date_end\" : \"MM-DD-YYYY\" // OPTIONAL\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/booking/{{booking_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						"{{booking_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete booking",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/booking/{{booking_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						"{{booking_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pricing Rule",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/pricing/{{pricing_rule_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pricing",
+						"{{pricing_rule_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete property",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/property/{{property_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"property",
+						"{{property_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List bookings (Lesser than $15000 final price)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/booking/list?final_price__lte=15000",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						"list"
+					],
+					"query": [
+						{
+							"key": "final_price__lte",
+							"value": "15000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List properties (Greater than $100 base price)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/property/list?base_price__gte=100",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"property",
+						"list"
+					],
+					"query": [
+						{
+							"key": "base_price__gte",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
